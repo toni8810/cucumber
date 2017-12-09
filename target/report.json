@@ -1,0 +1,97 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9221111278,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Setup.openUpBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with correct credentials",
+        "description": "",
+        "id": "loginfeature;login-with-correct-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 46036525,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Setup.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9394063967,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to the login page",
+            "match": {
+              "location": "LoginSteps.userGoesToTheLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2923869153,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User attempts to login with the following credentials",
+            "match": {
+              "location": "LoginSteps.userAttemptsToLoginWithTheFollowingCredentials(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "arwol006@gmail.com",
+                  "passwordInvalid"
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 614056265,
+              "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat steps.LoginSteps.userIsLoggedIn(LoginSteps.java:56)\n\tat ✽.Then User is logged in(src/test/java/feature/Login.feature:9)\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "User is logged in",
+            "match": {
+              "location": "LoginSteps.userIsLoggedIn()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "This is responsible for logging in and out",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "src/test/java/feature/Login.feature"
+  }
+]

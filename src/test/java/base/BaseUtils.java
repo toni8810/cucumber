@@ -1,14 +1,16 @@
 package base;
 
+import org.openqa.selenium.WebDriver;
+
 public class BaseUtils {
 
-    private String stepInfo;
+    private WebDriver driver;
 
-    public String getStepInfo() {
-        return stepInfo;
+    public WebDriver getDriver() {
+        return driver;
     }
 
-    public void setStepInfo(String stepInfo) {
-        this.stepInfo = stepInfo;
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
     }
 }
